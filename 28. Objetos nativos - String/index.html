@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Objetos nativos - String</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //Instanciacion
+      var daw = "Desarollo de aplicaciones web",
+          dam = 'Desarrollo de aplicaciones multiplataforma',
+          asir = "Administracion de 'Sistemas informaticos' en Red",
+          smr = "Sistemas \"Microinformaticos\" y redes",
+          ciclos = new String("");
+
+      //Concatenacion de cadenas
+      ciclos = ciclos + "Hay 3 ciclos de Grado Superior: \n";
+      ciclos = ciclos + daw + ", " + dam + ", " + asir + "\n";
+      ciclos = ciclos + " y 1 ciclo de Grado Medio: \n";
+      ciclos = ciclos + smr;
+
+      alert(ciclos);
+
+      //Propiedades
+      //length: devuelve la longitud de una cadena
+      alert("La longitud de ciclos es: "+ciclos.length);
+
+
+    </script>
+  </body>
+</html>

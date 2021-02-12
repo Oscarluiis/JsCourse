@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Objetos del navegador - Navigator</title>
+  </head>
+  <body>
+    <p id="navegador"></p>
+    <script type="text/javascript">
+      /*Caracteristicas
+        - Guarda informacion sobre el navegador
+        - No hay un estandar publico pero la mayoria de los navegadodores
+          lo soportan
+      */
+
+      //Propiedades del objeto navigator
+      var texto = " ";
+
+      //appCodeName: codeName del navegador (nombre del navegador)
+      texto = texto + "</br>codeName: "+navigator.appCodeName;
+      document.getElementById('navegador').innerHTML = texto;
+
+      //appName: appName del navegador (base del navegador)
+      texto = texto + "</br>appName: "+navigator.appName;
+      document.getElementById('navegador').innerHTML = texto;
+
+      //appVersion: appVersion del navegador (version del navegador)
+      texto = texto + "</br>appVersion: "+navigator.appVersion;
+      document.getElementById('navegador').innerHTML = texto;
+
+      //product: product del navegador (motor del navegador)
+      texto = texto + "</br>product: "+navigator.product;
+      document.getElementById('navegador').innerHTML = texto;
+
+      //platform: platform del navegador (para que plataforma se compilo)
+      texto = texto + "</br>platform: "+navigator.platform;
+      document.getElementById('navegador').innerHTML = texto;
+
+      //onLine: onLine del navegador (saber si el navegador esta online o no)
+      texto = texto + "</br>onLine: "+navigator.onLine;
+      document.getElementById('navegador').innerHTML = texto;
+
+      //language: language del navegador (saber el lenguaje del navegador)
+      texto = texto + "</br>language: "+navigator.language;
+      document.getElementById('navegador').innerHTML = texto;
+
+      //cookieEnabled: cookieEnabled del navegador (si estan activas las cookies)
+      texto = texto + "</br>cookieEnabled: "+navigator.cookieEnabled;
+      document.getElementById('navegador').innerHTML = texto;
+
+      //userAgent: userAgent del navegador (informacion de navegador en servidor)
+      texto = texto + "</br>userAgent: "+navigator.userAgent;
+      document.getElementById('navegador').innerHTML = texto;
+
+      //geolocation: geolocation del navegador (ubicacion de posicion de usuario)
+      texto = texto + "</br>geolocation: "+navigator.geolocation;
+      //Se hace una funcion para sacar las propiedades del objeto que deseamos ver
+      document.getElementById('navegador').innerHTML = texto;
+
+      //Metodo del objeto navegador
+      //javaEnabled(): devuelve true o false si esta activado java
+      alert("Java activado: "+navigator.javaEnabled());
+
+    </script>
+  </body>
+</html>

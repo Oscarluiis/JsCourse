@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Break y continue</title>
+</head>
+<body>
+    <script>
+    /*Sintaxis
+    break: salir o saltar fuera de un ciclo finalizado
+    continue: saltar a la siguiente iteracion del ciclo,
+              permite saltar una o mas iteraciones.
+    */
+        //Ejemplo con break
+        var i;
+        for(i = 0; i < 10; i = i + 1){
+            if(i == 3)
+                break;
+            alert("i = "+i);
+            
+        }
+        
+        //Ejemplo con continue
+        var j;
+        for(j = 0; j < 10; j = j + 1){
+            if(j == 3 || j == 5)
+                continue;
+            alert("j = "+j);            
+        }
+        
+        /*Etiquetas: preceder una sentencia con el nombre de la etiqueta
+                //   seguida de dos puntos
+           - Break sin etiqueta se puede usar en ciclo o switch
+           - Break con etiqueta se puede usar en un bloque de sentencias
+             etiquetado
+           - Continue: la etiqueta es opcional y siempre debe estar dentro de un
+                       ciclo.
+        */
+        
+        //Ejemplo de break con etiqueta
+        var animales = ["Perro", "Gato", "Hamster"];
+        
+        ver_animales: {
+            alert(animales[0]);
+            alert(animales[1]);
+            break ver_animales; //Debemos poner que bloque de codigo queremos romper
+            alert(animales[2]);
+        }
+        
+        //Ejemplo de continue con etiqueta
+        var k;
+        ciclo:
+            for(k = 0; k < 10; k = k + 1){
+            if(k == 3 || k == 5)
+                continue ciclo;
+            alert("k = "+k);            
+        }
+    </script>
+</body>
+</html>

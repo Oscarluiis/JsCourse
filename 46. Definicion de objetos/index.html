@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Objetos - Definicion</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //1. Definir un objeto simple utilizando un literal
+
+      var persona1 = {
+        nombre: "Oscar",
+        apellido: "Sanchez",
+        anio: 1997
+      };
+
+      //2. Definir y crear un objeto simple utilizando 'new'
+
+      var persona2 = new Object();
+      persona2.nombre = "Charles";
+      persona2.apellido = "Santos";
+      persona2.anio = 1990;
+
+      //3. Definir un constructor de un objeto y generar objetos
+      //del tipo construido
+      function Persona (nom, ape, an){
+        this.nombre = nom;
+        this.apellido = ape;
+        this.anio = an;
+      }
+
+      var oscar = new Persona("Oscar","Sanchez",1997);
+      var luis = new Persona("Luis","Valle",1999);
+
+      /*This: palabra reservada
+        - Hace referencia al propietario de la funcion que se invoca
+        - Hace referencia al objeto donde la funcion es un metodo
+      */
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Eventos - Modelo de registro de eventos tradicional</title>
+  </head>
+  <body>
+    <!--
+    Evento:
+      - Mecanismo que se acciona cuando el usuario realiza un cambio
+        sobre la pagina web.
+
+      - Capturar un evento es programar una accion para que se realice
+        una tarea
+
+      - El encargado de gestionar los eventos es el DOM (Document Object Model)
+
+    Manejador:
+      - Accion que se va a manejar. Por ejemplo, en el evento click (hacer clic
+      con el raton) el manejador es onClick
+    -->
+    <h1>Modelo de registro de eventos tradicional</h1>
+    <h3 id="tradicional">Pulsa aqui para ver que se ejecuta</h3>
+
+    <script type="text/javascript">
+      document.getElementById("tradicional").onclick = cambiar;
+      //No necesita parentesis para la funcion 'cambiar' o se ejecutaria
+
+      function cambiar(){
+        alert("Entramos en cambiar...");
+        document.getElementById("tradicional").innerHTML =
+        "Modelo de registro de eventos tradicional";
+        document.getElementById("tradicional").onclick = null;
+      }
+
+      window.onload = function(){
+        alert("La pagina ha cargado correctamente");
+        document.getElementById("tradicional2").onclick = miMensaje;
+      }
+
+      function miMensaje(){
+        document.getElementById("tradicional2").innerHTML =
+        "Modelo de registro de eventos tradicional";
+      }
+    </script>
+
+    <!--
+    Inconveniente: la pagina debe estar completamente cargada para que se
+    utilicen las funciones DOM que asignan manejadores a los elementos HTML
+    -->
+
+    <h3 id="tradicional2">Pulsa aqui para ver que se ejecuta</h3>
+  </body>
+</html>

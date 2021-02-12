@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Objetos nativos - Number II</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      /* Caracteristicas
+        - Solo hay un tipo de dato numero
+          - Podemos representar: 34, 34.05, 123e4, 123e-4, 0xFF
+      */
+
+      //Cambio de base entre numeros: toString()
+      var base10 = 128;
+      //alert("Binaria: "+base10.toString(2));
+      //alert("Octal: "+base10.toString(8));
+      //alert("Hexadecimal: "+base10.toString(16));
+
+      //Infinito a -Infinito: Infinity -Infinity
+      /*
+        var inf = 2;
+        while(inf != Infinity){
+          alert(inf);
+          inf = inf * inf; //Tambien inf *= inf
+        }
+
+        var dividendo=-2, divisor = 0;
+        alert("Division -2/0= "+ (dividendo/divisor)); //-infinity
+        alert("Typeof: "+(dividendo/divisor)); //-Infinity
+
+        //NaN: not a number
+        var atipico = 100/"casa";
+            atipico2= 100/"10";
+        alert("100/'casa' = "+atipico);
+        alert("100/'10' = "+atipico2);
+        alert("¿Es un NaN atipico?: "+isNaN(atipico));
+        alert("¿De que tipo es NaN?: "+typeof(atipico));
+        */
+
+        //Numeros como objetos
+        /*
+        var numero = 123;
+        var numero2 = new Number(123);
+        var numero3 = new Number(123);
+        alert("numero 1 = "+typeof(numero)); //Number
+        alert("numero 2 = "+typeof(numero2)); //Object
+
+        alert("numero 1 == numero 2 "+(numero==numero2)); //true
+        alert("numero 1 === numero 2 "+(numero===numero2));//false
+        alert("numero 2 === numero 3 "+(numero2===numero3)); //false
+        */
+
+        //Propiedades
+        /*
+        var maximo = Number.MAX_VALUE,
+            minimo = Number.MIN_VALUE,
+            infinito = Number.POSITIVE_INFINITY,
+            infinitoNegativo = Number.NEGATIVE_INFINITY,
+            noNumero = Number.NaN;
+        alert("Valor maximo: "+maximo);
+        alert("Valor minimo: "+minimo);
+        alert("Infinito positivo: "+infinito);
+        alert("Infinito positivo: "+infinitoNegativo);
+        alert("No es un numero: "+noNumero);
+        */
+        //Metodos
+        //toFixed(<numero_decimales>): devuelve una cadena con el numero
+        //especifico de decimales indicados
+        /*
+        var numerico = 9.8765;
+        alert("toFixed 0 es: "+numerico.toFixed(0));
+        alert("toFixed 2 es: "+numerico.toFixed(2));
+        alert("toFixed 6 es: "+numerico.toFixed(6));
+        */
+        //toPrecision(<numero_cifras>): cadena con el numero especifico de
+        //cifras indicado:
+        /*
+        var numerico2 = 9.8765;
+        alert("toPrecision 0 es: "+numerico2.toPrecision());
+        alert("toPrecision 2 es: "+numerico2.toPrecision(2));
+        alert("toPrecision 6 es: "+numerico2.toPrecision(6));
+        */
+        //toExponential: cadena con el numero redondeado a notacion cientifica
+        var numerico2 = 9.8765,
+            numerico3 = 123456789;
+        alert("toExponential es: "+numerico2.toExponential(2));
+        alert("toExponential es: "+numerico3.toExponential(2));
+
+        //valueOf: devuelve el valor primitivo de un objeto
+        //toString:devuelve la cadena de un numero
+        var numerico4 = 123;
+        alert("Numero toString es: "+numerico4.toString());
+        alert("Numero toString es: "+(123).toString());
+        alert("Numero toString es: "+(123+7).toString());
+
+        //Metodos globales para convertir variables en numeros
+        //Number(): devuelve el valor numerico de una variable
+        alert("Number () es: "+Number(true)); //Devuelve 1
+        alert("Number () es: "+Number(false)); //Devuelve 0
+        alert("Number () es: "+Number(new Date())); //Devuelve los milisegundos desde 1/1/1970
+        alert("Number () es: "+Number("10")); //Devuelve el numero de la cadena
+        alert("Number () es: "+Number("casa")); //Devuelve NaN
+
+        //parseInt () / parseFloat():
+        alert("parseInt es: "+parseInt("10.6")); //Devuelve el entero
+        alert("parseInt es: "+parseInt("10 20")); //Devuelve el primer entero
+        alert("parseInt es: "+parseInt("10 casa")); //Devuelve el primer entero
+        alert("parseInt es: "+parseInt("casa 10")); //Devuelve NaN
+        //mismas situaciones con el parseFloat
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Eventos - Modelo de registro de eventos en linea</title>
+
+    <!--
+    Evento:
+      - Mecanismo que se acciona cuando el usuario realiza un cambio
+        sobre la pagina web.
+
+      - Capturar un evento es programar una accion para que se realice
+        una tarea
+
+      - El encargado de gestionar los eventos es el DOM (Document Object Model)
+
+    Manejador:
+      - Accion que se va a manejar. Por ejemplo, en el evento click (hacer clic
+      con el raton) el manejador es onClick
+    -->
+  </head>
+
+  <body onload="alert('La pagina se ha cargado correctamente')">
+    <h1>Modelo de registro de eventos en linea</h1>
+    <!-- Cada evento XHTML tiene sus posibles eventos como:
+
+      - Propiedades: puede tener un evento de cada tipo.
+
+      - El nombre del evento es 'on' seguido del nombre de la accion
+    -->
+
+    <!-- Manejadores como atributos de una etiqueta XHTML-->
+    <h3 id="cab1" onclick="this.innerHTML='Javascript en XHTML'"
+    onmouseover="this.style.background='red'"
+    onmouseout="this.style.background='white'">Pulsa aqui para ver magia</h3>
+
+    <!-- Tambien es equivalente aunque no recomendado:
+    <h3 id="cab1" onclick="document.getElementById('cab1')...innerHTML...""></h3>
+
+    -->
+
+    <!-- Manejadores como funciones externas-->
+    <h3 onclick="cambiar(this)">Pulsa aqui para ver como se ejecuta</h3>
+
+    <!--Javascript-->
+    <script type="text/javascript">
+      function cambiar(elemento){
+        elemento.innerHTML = "Javascript en XHTML y funcion externa";
+      }
+
+      function alertar(){
+        alert("Se ha cambiado de direccion, vamos a Google");
+      }
+
+      function preguntar(){
+        return confirm("¿Deseas ir al direccion?");
+      }
+    </script>
+
+      <!--Hay acciones que desencadenan varios eventos. Ej. submit desencadena
+      onmousedown, onclick, onmouse, onmouseup, onsubmit
+
+      Para evitar que el navegador ejecute la accion por defecto necesitamos
+      añadir "return false;"
+
+      -->
+      <a href="http://www.google.com" onclick="alertar(); return false;">Pulsa aqui para ver</a>
+    </br>
+      <a href="http://www.google.com" onclick="return preguntar();">Pulsa aqui para ver</a>
+
+      <!-- Carga de pagina con el evento onload -->
+      <!-- Escribimos la siguiente etiqueta: <body onload="funcion_a_ejecutar" -->
+
+
+  </body>
+</html>

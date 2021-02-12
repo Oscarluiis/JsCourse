@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Browser Object Model - Window II</title>
+  </head>
+  <body>
+    <p id="ventana"></p>
+    <script type="text/javascript">
+      /*Caracteristicas
+        - Representa una ventana abierta en un navegador
+
+        - Si una ventada tiene en su interior etiquetas
+          de tipo <iframe> el navegador crea un objeto
+          window para el html inicial y uno para cada
+          <iframe
+          >
+        - Todos los objetos, funciones, variables...
+          son miembros del objeto window: las funciones
+          son sus metodos; las variables globales y el DOM
+          sus propiedades.
+
+        - No todos los metodos sirven para todos los navegadores:
+          hay que comprobar la compatibilidad
+      */
+
+      //Propiedades basicas de window
+      window.name = "Mi ventana";
+      var texto = " ";
+
+      //Nombre de la ventana
+      texto = texto + "<br/>Nombre: "+window.name;
+
+      //Tamaño de la ventana con toolbar y scrollbar
+      texto = texto + "<br/>Ancho externo: "+window.outerWidth;
+      texto = texto + "<br/>Alto externo: "+window.outerHeight;
+
+      //Tamaño de la ventana sin toolbar y sin scrollbar
+      texto = texto + "<br/>Ancho interno: "+window.innerWidth;
+      texto = texto + "<br/>Alto interno: "+window.innerHeight;
+
+      //Scroll horizontal y vertical
+      texto = texto + "<br/>Scroll horizontal es: "+window.pageXOffset;
+      texto = texto + "<br/>Scroll vertical es: "+window.pageYOffset;
+
+      //Distancia de la esquina superior izquierda
+      texto = texto + "<br/>Distancia desde la izquierda es: "+window.screenX;
+      texto = texto + "<br/>Distancia desde arriba es: "+window.screenY;
+
+      document.getElementById('ventana').innerHTML = texto;
+
+      /*Propiedades con iFrames
+        - frames: devuelve todos los elementos iframe de la ventana
+        - frameElement: devuelve el frame en el que la ventana esta insertada
+        - length: devuelve el numero de frames que tiene la ventana
+
+        Propiedades con otras ventana
+        - closed: devuelve un booleano si la ventana esta cerrada
+        - opener: devuelve una referencia con la ventana que creo la ventana actual
+        - parent: devuelve la ventana padre de la ventana actual
+        - self: devuelve la ventana actual
+
+        Otros objetos del navegador
+        window.document -> devuelve el documento
+        window.navigator -> devuelve el navegador
+        window.screen -> devuelve la propiedad/objeto screen
+        window.history -> devuelve el historial
+        window.location -> devuevle la localidad
+
+      */
+
+      //Metodos de window mas importantes
+      var miVentana; //Crear fuera de las funciones para acceder a ellas global
+
+      //Metodo open -> para abrir ventanas
+      //open(<URL>,<especificaciones>)
+      function crearVentana(){
+          //miVentana = window.open("http://www.google.com");
+          miVentana = window.open("","","width=500,height=200");
+          miVentana.document.write("<h1>Mi ventana</h1>");
+      }
+
+      //close(): cierra una ventana en concreto
+      function eliminarVentana (){
+        miVentana.close();
+      }
+
+      //resizeBy(<n_pixeles_ancho>,<n_pixeles_alto>): redimensiona una ventana
+      //un numero de pixeles respecto a su tamaño actual
+
+      function cambiarTamaño(){
+        miVentana.resizeBy(10,10);
+      }
+
+      //resizeTo(<n_pixeles_ancho>,<n_pixeles_alto>): redimensiona una ventana
+      //al numero de pixeles indicado
+
+      function tamanioDeseado(){
+        miVentana.resizeTo(100,100);
+      }
+
+      //moveBy(<n_pixeles_ancho>,<n_pixeles_alto>): mueve una ventana
+      //un numero de pixeles respecto a su posicion actual
+
+      function moverVentana(){
+        miVentana.moveBy(10,10);
+      }
+
+      //moveTy(<n_pixeles_ancho>,<n_pixeles_alto>): mueve una ventana
+      //un numero de pixeles en concreto
+
+      function moverVentanaA(){
+        miVentana.moveTo(100,100);
+      }
+
+      //scrollBy(<n_pixeles_ancho>,<n_pixeles_alto>): mueve las barras de scroll
+      //un numero de pixeles desde la posicion actual
+
+      //scrollTo(<n_pixeles_ancho>,<n_pixeles_alto>): mueve las barras de scroll
+      //a una posicion determinada
+
+      //focus(): pone el foco en la ventana indicada
+      function enfocar(){
+        miVentana.focus();
+      }
+
+      //print(): imprime lo que hay en la ventana indicada
+      function imprimir(){
+        print(); //imprime la ventana actual
+        miVentana.print(); //imprimir la ventana indicada
+      }
+
+      //stop(): detener la carga de la pagina
+
+    </script>
+    <button onclick="crearVentana()">Crear ventana</button>
+    <button onclick="eliminarVentana()">Eliminar ventana</button>
+    <button onclick="cambiarTamaño()">Cambiar tamaño ventana</button>
+    <button onclick="tamanioDeseado()">Cambiar tamaño deseado</button>
+    <button onclick="moverVentana()">Mover ventana desde su posicion</button>
+    <button onclick="moverVentanaA()">Mover ventana especifico</button>
+    <button onclick="enfocar()">Enfocar ventana</button>
+    <button onclick="imprimir()">Imprimir Ventana</button>
+
+  </body>
+</html>

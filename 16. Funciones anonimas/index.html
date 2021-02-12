@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Funciones anonimas</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //Sintaxis de una funcion no anima
+      //function nombre_funcion (<parametros>){<instrucciones>}
+
+      //Sintaxis de una funcion anonima function (<parametros){<instrucciones>}
+      //Funcion anonima se puede asignar a una variable
+
+      var resultado, producto = function (a, b){
+        return a * b;
+      };
+
+      resultado = producto(3,3);
+      alert(resultado);
+
+      //El constructor function()
+      var resultado2, miFuncion =
+      new Function("a", "b", "return a*b;");
+      resultado2 = miFuncion(3,5);
+      alert(resultado2);
+
+      //Funciones anonimas autoinvocadas
+      (function () {
+        alert("Hola");
+      }());
+
+
+    </script>
+  </body>
+</html>

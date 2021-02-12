@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Objetos del navegador - Cuadros de dialogo</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //alert(<mensaje>): muestra un mensaje al usuario y no devuelve ningun valor
+      alert("Hola Caracola");
+
+      //prompt(<mensaje>,[(opcional)<texto_por_defecto>]): muestra un mensaje al
+      //usuario y un campo que puede o contener o no texto por defecto. Lo que
+      //introduzca el usuario se almacenara en una variable a la que se asigna.
+      var respuesta = prompt("¿Cual es tu nombre?","Introduce un nombre");
+      alert("Hola "+respuesta);
+
+      //confirm(<mensaje>): muestra un mensaje al usuario y dos botones, si el
+      //usuario pulsa 'aceptar' devuelve true y si pulsa 'cancelar' o cierra
+      //devuelve false
+      var respuesta2 = confirm("¿Te gusta javascript?");
+      /*
+      if (respuesta2 == true) {
+        alert("¡Grande!")
+      }else{
+        alert("¡Hasta luego!");
+      }
+      */
+      alert((respuesta2) ? "¡Grande!" : "¡Hasta luego"); //Equivalente a la condicional
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Objetos del navegador - Location</title>
+  </head>
+  <body>
+      <p id="localidad"></p>
+    <script type="text/javascript">
+      /*
+      Caracteristicas:
+        - Guarda informacion de la url actual
+        - No hay un estandar publico pero la mayoria de navegadores lo soportan
+      */
+
+      //Propiedades del objeto location
+      var texto = " ";
+
+      //href: HREF(URL) de la pagina
+      texto = texto + "</br>Href: "+location.href;
+
+      //hostname: nombre del host de la pagina
+      texto = texto + "</br>Hostname: "+location.hostname;
+
+      //pathname: pathname de la pagina
+      texto = texto + "</br>Pathname: "+location.pathname;
+
+      //hash: has o ancla de la pagina (Ej. www.google.com/index.html#shop)
+      texto = texto + "</br>Hash: "+location.hash;
+
+      //host: nombre del hostname y el puerto
+      texto = texto + "</br>Host: "+location.host;
+
+      //origin: devuelve el nombre del protocolo, hostname y puerto
+      texto = texto + "</br>Origin: "+location.origin;
+
+      //search: extraer el querystring de la pagina (Ej. www.web.com/index.html?)
+      //lo que esta despues de la interrogacion
+      texto = texto + "</br>search: "+location.search;
+
+      document.getElementById('localidad').innerHTML = texto;
+
+      //Metodos del objeto location
+      //assign(<url>): asigna un nuevo documento a la pagina
+      function nuevoDocumento(){
+        location.assign("http://www.google.com");
+      }
+
+      //reload(): recarga la pagina
+      function recarga(){
+        location.reload();
+      }
+
+      //replace(<url>): sustituye la pagina por otra pero desaparece su historial
+      function sustituye(){
+        location.replace("http:/www.google.com");
+      }
+    </script>
+    <button onclick="nuevoDocumento()" type="button" name="button">Nuevo</button>
+    <button onclick="recarga()"type="button" name="button">Refrescar</button>
+    <button onclick="sustituye()" type="button" name="button">Sustituir</button>
+
+  </body>
+</html>

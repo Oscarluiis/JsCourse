@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Objetos nativos - Math II</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      /*Caracteristicas
+      - Permite realizar operaciones matematicas
+      - No es un constructor, no usamos var x = new Math();
+      - Ej: var pi = Math.PI; var square = Math.sqrt(<valor>);
+
+        Propiedades
+        - E, LOGN2, LOGN10, LOG2E, LOG10E, PI, SQRT1_2, SQRT2
+      */
+
+      var pi = Math.PI;
+      //alert("El numero pi vale: "+pi);
+
+      //Metodos
+
+      //random(); -> devuelve un numero aleatorio entre 0 y el numero
+      //alert("Numero aleatorio: "+Math.random());
+
+      //max(<lista_de_valores>)
+      //alert("Numero maximo: "+Math.max(5,10,2,1,50));
+
+      //min(<lista_de_valores>)
+      //alert("Numero minimo: "+Math.min(5,10,2,1,50));
+
+      //round(<numero>) -> devuelve un numero redondeado a la alza o baja
+      var a = 4.3, b = 4.7;
+      //alert("Redondeo de 'a' es: "+Math.round(a)+" Redondeo de 'b' es: "+Math.round(b));
+
+      //ceil(<numero>) -> devuelve un numero redondeado al realizar
+      //alert("Redondeo de 'a' es: "+Math.ceil(a));
+      //floor(<numero>) -> devuelve un numero redondeado a la baja
+      //alert(" Redondeo de 'b' es: "+Math.floor(b));
+
+      //Numero aleatorio entre 0 y 10:
+      //var aleatorio = Math.floor(Math.random()*11);
+      //alert("Numero aleatorio y redondeado es: "+aleatorio);
+
+      //pow(<base>,<exponente>) -> devuelve el valor de la potencia
+      alert("La potencia de 3^2 es: "+Math.pow(3,2));
+
+      //sqrt(<numero>) -> devuelve la raiz del numero
+      alert("La raiz de 36 es: "+Math.sqrt(36));
+
+      //abs(<numero>) -> devuelve el valor absoluto de un numero
+      alert("La raiz de -5 es: "+Math.abs(-5));
+
+      /*Metodos trigonometricos
+        - sin
+        - cos
+        - tan
+        - asin
+        - acos
+        - atan
+        - atan2
+      */
+
+    </script>
+  </body>
+</html>

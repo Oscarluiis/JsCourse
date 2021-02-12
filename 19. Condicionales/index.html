@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Condicionales</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //if: especifica un bloque de codigo que se ejecuta si una condicion
+      //es cierta
+
+      /*Sintaxis
+      if(<condicion>){
+        //Instrucciones si la condicion es verdadera
+      }
+      */
+
+      var nota = 8;
+      if (nota>=5) {
+        alert("Has aprobado");
+      }
+
+      //else: especifica un bloque de codigo que se ejecuta si una condicion
+      //es falsa
+      /*Sintaxis
+      if(<condicion>){
+        //Instrucciones si la condicion es verdadera
+      }else{
+        //Instrucciones si la condicion es falsa
+      }
+      */
+
+      var nota2 = 4;
+      if (nota2 >=5) {
+        alert("Has aprobado");
+      }else{
+        alert("Has suspendido");
+      }
+
+      //else if: especifica una nueva condicion si la primera es falsa
+      /*Sintaxis
+      if(<condicion>){
+        //Instrucciones si la condicion es verdadera
+      }else if (<condicion2>){
+        //Instrucciones si la condicion 1 es falsa y la 2 verdadera
+      }else{
+        //Instrucciones si las condiciones anteriores son falsas
+      }
+      */
+
+      var nota3 = 9;
+      if (nota3<5) {
+        alert("Has suspendido");
+      }else if(nota3==5){
+        alert("Has sacado un suficiente");
+      }else if(nota3==6){
+        alert("Has sacado un bien");
+      }else if (nota3==7 || nota3==8) {
+        alert("Has sacado un notable");
+      }else{
+        alert("Has sacado un sobresaliente");
+      }
+    </script>
+  </body>
+</html>

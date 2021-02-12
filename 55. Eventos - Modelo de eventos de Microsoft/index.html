@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Eventos - Modelo de eventos de Microsoft</title>
+  </head>
+  <body>
+    <!--
+    Evento:
+      - Mecanismo que se acciona cuando el usuario realiza un cambio
+        sobre la pagina web.
+
+      - Capturar un evento es programar una accion para que se realice
+        una tarea
+
+      - El encargado de gestionar los eventos es el DOM (Document Object Model)
+
+    Manejador:
+      - Accion que se va a manejar. Por ejemplo, en el evento click (hacer clic
+      con el raton) el manejador es onClick
+    -->
+    <h1>Modelo de eventos avanzados de Microsoft</h1>
+    <h3 id="ms">Modelo de Microsoft</h3>
+    <h3 id="msanonima">Modelo de Microsoft</h3>
+
+    <!-- Para Microsoft
+
+    elemento.attachEvent("<evento_con_on>",<funcion_sin_parentesis>);
+    para este cas, no se necesita ponerle true o false al final.
+    -->
+
+
+    <!-- Javascript -->
+    <script type="text/javascript">
+
+      function saludarUnaVez(){
+          alert("Hola, Caracola");
+          document.getElementById('ms').detachEvent("onclick", saludarUnaVez);
+      }
+
+      function colorear(){
+        document.getElementById('ms').style.color = 'red';
+      }
+
+      function fondo(){
+        document.getElementById('ms').style.background = 'green';
+      }
+
+
+      document.getElementById('ms').attachEvent("onclick",saludarUnaVez);
+      document.getElementById('ms').attachEvent("onclick",colorear);
+      document.getElementById('ms').attachEvent("onmouseover",fondo);
+
+      /*
+        Funciones anonimas en Microsoft
+          - elemento.attachEvent("<evento_con_on",funcion(){<instrucciones>});
+      */
+
+      document.getElementById('msanonima').attachEvent("onclick", function(){
+        this.style.backgroundColor = "#C0C0C0";
+      });
+    </script>
+  </body>
+</html>

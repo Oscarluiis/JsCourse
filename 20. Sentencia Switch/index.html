@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sentencia Switch</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      /*
+      - Switch
+        - Se utiliza para hacer diferente acciones, basadas en diferentes
+        condiciones
+        - La condiciones se evalua una unica vez
+        - Si hay alguna coincidencia con algun valor, ejecuta el codigo
+          correspondiente
+        - Break: sale del bloque switch
+
+      - Sintaxis
+        switch (<expresion>) {
+          case <expresion>:
+                //Instrucciones para el valor correspondiente
+            break;
+          case <expresion_n>:
+              //Instrucciones para el valor correspondiente
+          default:
+              //Instrucciones para el caso que no se cumpla ninguna
+                condicion
+        }
+
+      */
+
+      var nota = 2, mensaje="";
+
+      switch (nota) {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            mensaje = "Suspenso";
+              break;
+        case 5:
+            mensaje = "Suficiente";
+              break;
+        case 6:
+            mensaje = "Bien";
+              break;
+        case 7:
+        case 8:
+            mensaje = "Notable";
+              break;
+        case 9:
+        case 10:
+            mensaje = "Sobresaliente";
+              break;
+        default:
+            mensaje = "El valor no es valido";
+
+      }
+      alert(mensaje);
+
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ambito de variables</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //Variables locales
+      /*
+      - Se definen dentro de una funcion
+      - Tienen ambito local (solo dentro de ella)
+      - Son accesibles dentro de ellas (dentro de la funcion)
+      - Podemos declarar variables con el mismo nombre en diferentes
+        funciones
+      - Variable local desaparece cuando finaliza la funcion
+      */
+
+      function saludar(){
+        var saludo = "Hola";
+        alert(saludo);
+      }
+      saludar();
+
+      //Variables globales
+      /*
+      - Se definen fuera de una funcion
+      - Tienen ambito global (en toda la pagina)
+      - Son accesibles desde fuera y dentro de las funciones
+      - Variable global desaparece cuando finaliza la pagina
+      */
+
+      var despedida = "Adios";
+      function despedir(){
+        alert(despedida);
+        //despedida = "Hasta luego";
+      }
+
+      despedir();
+      alert(despedida);
+
+      //Variables automaticamente globales
+      /*
+      - Si asignamos un valor a una variable no declarada se convierte en global
+      */
+
+      function preguntar(){
+        pregunta = "¿De que color es el caballo blanco de Oscar?";
+      }
+      preguntar();
+      alert(pregunta);
+
+      //Variables globales y locales con el mismo nombre
+      var miVariable = "Fuera";
+
+      function ambito(){
+        var miVariable = "Dentro";
+        alert(miVariable);
+      }
+      alert(miVariable); //Devuelve fuera
+      ambito(); //Devuelve dentro
+      alert(miVariable); //Devuelve fuera
+
+      //Variables globales y redefinida dentro de una funcion
+      var miVariable2 = "Fuera";
+
+      function ambito(){
+        miVariable2 = "Dentro";
+        alert(miVariable2);
+      }
+      alert(miVariable2); //Devuelve fuera
+      ambito(); //Devuelve dentro
+      alert(miVariable2); //Devuelve dentro
+
+    </script>
+
+  </body>
+</html>

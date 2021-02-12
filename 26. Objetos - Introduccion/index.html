@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Objetos - Introduccion</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //Datos primitivos
+      var cadena = "Oscar Sanchez";
+      var pi = 3.14;
+      var bool = false; //true
+      var noDefinida = undefined;
+      var nula = null;
+      //Tambien se puede agregar hacia abajo solo agregando ,
+
+      /*
+      - Objetos nativos: no dependen del navegador
+        - String
+        - Number
+        - Boolean
+        - Data
+        - Math
+        - RegExp (expresiones regulares)
+        - Array
+        - Function
+        - Object
+
+      - Objetos de alto nivel: dependen del navegador
+        - Window
+        - Screen
+        - Navigator
+        - Location
+        - History
+        - Document
+
+      */
+
+      // Definicion de objeto:
+      var programador = {
+        nombre: "Oscar",
+        apellido: "Sanchez",
+        nacimiento: "1997"
+      };
+
+      /*
+        - Propiedades: se definen en modo nombre: valor.
+                       Ej. nombre, apellido, nacimiento
+
+       - Metodos: son acciones que se pueden ejecutar sobre
+                  un objeto
+      */
+
+
+      /* Para ver las propiedades de programador
+      for (var dato in programador) {
+        alert(dato);
+      }
+      */
+
+      /* Para ver los valores de las propiedades
+      for (var dato in programador) {
+        alert(programador[dato]);
+      }
+      */
+
+      /* Para ver las propiedades con sus valores
+      for (var dato in programador) {
+        alert(dato + ": "+ programador[dato]);
+      }
+      */
+    </script>
+  </body>
+</html>

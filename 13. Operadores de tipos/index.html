@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Operadores de tipos</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //TypeOf: nos devuelve el tipo de dato de una variable o dato
+      var cadena = "Oscar", //devuelve string
+          numero = 3.14, //devuelve number
+          bool = true, //devuelve boolean
+          lista = [1,2,3,4], //devuelve un object
+          registro = {nombre: "Oscar", apellido: "Sanchez"}, //devuelve un object
+          fecha = new Date, //devuelve un object
+          miFuncion = function miFun (){alert("Hola");}, //devuelve function
+          sinDefinir, //devuelve undefined
+          vacia = null; //devuelve un object
+
+          // alert(typeof vacia);
+
+          //Instance of: nos devuelve true si un objeto es una instacia
+          //de  otro especificado
+          var animales = ["perro", "gato", "hamster"];
+          alert(animales instanceof Object); //Devuelve true
+          alert(animales instanceof Array); //Devuelve true
+          alert(animales instanceof Number); //Devuelve false
+    </script>
+  </body>
+</html>

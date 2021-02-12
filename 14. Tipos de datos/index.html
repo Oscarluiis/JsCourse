@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tipos de datos</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // Cadenas
+      var cadena = "Oscar",
+          cadena2 = ' Sanchez',
+          cadena3 = "Oscar 'Sanchez'";
+
+      // Numeros
+      var entero = 3,
+          decimal = 3.14,
+          cientifica = 12e-5;
+
+      // Booleanos
+      var cierto = true,
+          falso = false;
+
+      // Array
+      var lista = [1, "Hola", 6 , "Caracola"];
+
+      //Objetos
+      var animal = {
+        nombre: "Cortana",
+        tipo: "Perro",
+        raza: "No se sabe xD",
+        edad: 4
+      };
+
+      //Operador typeof
+      //alert(typeof cadena); //Devuelve string
+      //alert(typeof cierto); //Devuelve boolean
+      //alert(typeof lista); //Devuelve object
+      //alert(typeof animal); //Devuelve object
+
+      //Undefined
+      var objetoSinDefinir,
+          cadena = undefined;
+      //alert(typeof objetoSinDefinir); //Devuelve Undefined
+
+      //Vacio
+      var cadena4 = "";
+      //alert(cadena4);
+      alert("Cadena 4: " + cadena4 + " tipo " + typeof cadena4);
+
+      //NULL
+      var animal = null;
+      //alert(animal);
+      alert("Animal :" + animal + " tipo " + typeof animal);
+
+      //Nulos y no definidos
+      typeof undefined; //Devuelve un undefined
+      typeof null; //Devuelve el objeto
+      null === undefined; //Devuelve falso
+      null == undefined; //Devuelve true
+    </script>
+  </body>
+</html>

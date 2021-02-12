@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Constructores Integrados</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      /*
+      - Constructor string
+        - No es recomendable utilizar porque ya disponemos
+          de un dato primitivo de tipo string
+        - Se recomienda usar los datos primitivos
+        - Tambien se aplica para los demas datos primitivos
+          number, boolean, array...etc. Utilizar los datos nativos
+          es mucho mas rapido.
+      */
+      //string
+      var cadena = new String(),
+          cadena2 = "Oscar";
+
+      //number
+      var number = new Number(),
+          number2 = 3.14;
+
+      //number
+      var bool = new Boolean(),
+          bool2 = true;
+
+      //array
+      var arreglo = new Array(),
+          arreglo2 = [];
+
+      //RegExp
+      var expReg = new RegExp(),
+          expReg2 = /()/;
+
+      //function
+      var funcion = new Function();
+      var funcion2 = function(){};
+
+      //date
+      var fecha = new Date();
+      //no tiene dato primitivo
+
+      //math no se puede declarar con new porque es un objeto global
+
+      //object
+      var persona = {};
+
+    </script>
+  </body>
+</html>

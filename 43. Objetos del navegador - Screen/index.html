@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Objetos del navegador - Screen</title>
+  </head>
+  <body>
+    <p id="pantalla"></p>
+    <script type="text/javascript">
+      /*
+      Caracteristicas
+        - Contiene la informacion de la ventana del visitante
+        - No hay un estandar pero la mayoria de navegadores soportan screen
+      */
+
+      //Propiedades del objeto Screen
+      var texto = " ";
+
+      //Tamaño de la pantalla del usuario que accede
+      texto = texto + "</br>Ancho: "+screen.width;
+      texto = texto + "</br>Alto: "+screen.height;
+
+      //Tamaño pantalla sin barra de tareas
+      texto = texto + "</br>Ancho sin barra: "+screen.availWidth;
+      texto = texto + "</br>Alto sin barra: "+screen.availHeight;
+
+      //Profundidad de color de la pantalla
+      texto = texto + "</br>Profundidad: "+screen.colorDepth;
+
+      //Resolucion de color en bits por pixel
+      texto = texto + "</br>Resolucion: "+screen.pixelDepth;
+
+      document.getElementById('pantalla').innerHTML = texto;
+
+
+
+    </script>
+
+  </body>
+</html>

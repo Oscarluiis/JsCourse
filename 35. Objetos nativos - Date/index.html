@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Objetos nativos - Date</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      /*Creacion de objetos de tipo date
+        - Nota: los meses comienzan en cero y los dias de la semana tambien
+      */
+
+      /*
+      Creacion de fecha actual
+      var actual = new Date();
+      alert(actual);
+
+      //Creacion de fechas con cadenas
+      var dia = new Date("Wed Mar 25 2015 09:23:45 GMT +0100 (W.Europe Standard Time");
+      //Ignora si el dia de la semana esta mal o los parentesis
+      var dia2 = new Date("October 12, 2020 09:23:45");
+      var dia3 = new Date("January 25 2015");
+      var dia4 = new Date("Jan 25 2015"); //25 Jan 2015 tambien
+      //Podemos separarlos por comas y estas comas se ignoran
+      var dia5 = new Date ("2016-05-12T12:34:25");
+      var dia6 = new Date ("2016-05-12"); //YYYY-MM-DD
+      var dia7 = new Date ("2016/05/12"); //YYYY-MM-DD o DD/MM/YYYY
+      var dia8 = new Date ("2016-05"); //El dia se substituye por 1
+      var dia9 = new Date ("2016"); //El dia y año se substituye por 1
+      var dia9 = new Date ("2016"); //El dia y año se substituye por 1
+
+      //OJO -> Incluimos en 0 en dias y meses inferiores a 10
+      alert(dia);
+      alert(dia2);
+      alert(dia3);
+      alert(dia4);
+      alert(dia5);
+      alert(dia6);
+      alert(dia7);
+      alert(dia8);
+      alert(dia9);
+      */
+
+      //Creacion de fechas con milisegundos
+      var dia10 = new Date(86400000);
+      alert("Fecha en milisegundos"+dia10);
+
+      //Creacion de fechas con numeros
+      var fechaLargo = new Date (2015, 11, 10,14,40,26);
+      alert("Fecha larga: "+fechaLargo);
+      var fechaCorto = new Date (2015, 11, 10);
+      alert("Fecha larga: "+fechaCorto);
+
+      var dia11 = new Date ();
+      alert("Fecha: "+dia11);
+      alert("Fecha toString: "+dia11.toString());
+      alert("Fecha toUTCString: "+dia11.toUTCString());
+      alert("Fecha toDateString: "+dia11.toDateString());
+    </script>
+  </body>
+</html>

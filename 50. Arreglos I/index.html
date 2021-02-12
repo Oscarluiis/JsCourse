@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Arreglo - I</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      /*
+      Caracteristicas
+        - Almacena en una misma variable multiples valores
+          pueden ser valores primitivos, objetos, etc
+
+        - Se referencian con un indice numerico
+
+        - ¡OJO! Un objeto se referencia con un nombre.
+
+        - Puede almacenar diferentes tipos de datos
+      */
+
+      //Operaciones basicas con un arreglo
+
+      //Crear un arreglo: var <nombre_arreglo> = [<valores_separados_por_coma>];
+      var animales = ["Perro", "Gato", "Hamster"];
+
+      //var con constructor
+      //var <nombre_arreglo> = new Array (<valores_separados_por_coma>);
+      var animales2 = new Array ("Perro", "Gato", "Hamster");
+
+      //Acceder a los elementos de un arreglo
+      //<nombre_arreglo>[indice]: donde el primer elemento esta en la pos. 0
+      var miAnimal = animales[0];
+
+      //Mostrar todo el arreglo utilizando instrucciones de mostrar
+      ///(alert, document.write...)
+      alert(animales);
+      document.write(animales);
+
+      //Propiedades
+
+      //length: devuelve la longitud del arreglo (numero de elementos)
+      document.write("</br>La longitud del arreglo es: "+animales.length);
+
+      //Mostrar los elementos del arreglo 1 a 1
+      document.write("</br></br>Todos los elementos: ");
+
+      for (var elemento = 0; elemento < animales.length; elemento++) {
+        document.write("</br>Elemento: "+animales[elemento]);
+      }
+
+      /*Mostrar los elementos del arreglo 1 a 1 con for in
+      document.write("</br></br>Todos los elementos for in: ");
+      for (var elemento2 in animales) {
+        document.write("</br>Elemento: "+animales[elemento2]);
+      }
+      */
+
+
+    </script>
+  </body>
+</html>

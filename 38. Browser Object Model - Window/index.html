@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Browser Object Model - Window</title>
+  </head>
+  <body>
+    <p id="ventana"></p>
+    <script type="text/javascript">
+      /*Caracteristicas
+        - Representa una ventana abierta en un navegador
+
+        - Si una ventada tiene en su interior etiquetas
+          de tipo <iframe> el navegador crea un objeto
+          window para el html inicial y uno para cada
+          <iframe
+          >
+        - Todos los objetos, funciones, variables...
+          son miembros del objeto window: las funciones
+          son sus metodos; las variables globales y el DOM
+          sus propiedades.
+
+        - No todos los metodos sirven para todos los navegadores:
+          hay que comprobar la compatibilidad
+      */
+
+      //Propiedades basicas de window
+      window.name = "Mi ventana";
+      var texto = " ";
+
+      //Nombre de la ventana
+      texto = texto + "<br/>Nombre: "+window.name;
+
+      //Tamaño de la ventana con toolbar y scrollbar
+      texto = texto + "<br/>Ancho externo: "+window.outerWidth;
+      texto = texto + "<br/>Alto externo: "+window.outerHeight;
+
+      //Tamaño de la ventana sin toolbar y sin scrollbar
+      texto = texto + "<br/>Ancho interno: "+window.innerWidth;
+      texto = texto + "<br/>Alto interno: "+window.innerHeight;
+
+      //Scroll horizontal y vertical
+      texto = texto + "<br/>Scroll horizontal es: "+window.pageXOffset;
+      texto = texto + "<br/>Scroll vertical es: "+window.pageYOffset;
+
+      //Distancia de la esquina superior izquierda
+      texto = texto + "<br/>Distancia desde la izquierda es: "+window.screenX;
+      texto = texto + "<br/>Distancia desde arriba es: "+window.screenY;
+
+      document.getElementById('ventana').innerHTML = texto;
+
+      /*Propiedades con iFrames
+        - frames: devuelve todos los elementos iframe de la ventana
+        - frameElement: devuelve el frame en el que la ventana esta insertada
+        - length: devuelve el numero de frames que tiene la ventana
+
+        Propiedades con otras ventana
+        - closed: devuelve un booleano si la ventana esta cerrada
+        - opener: devuelve una referencia con la ventana que creo la ventana actual
+        - parent: devuelve la ventana padre de la ventana actual
+        - self: devuelve la ventana actual
+
+        Otros objetos del navegador
+        window.document -> devuelve el documento
+        window.navegator -> devuelve el navegador
+        window.screen -> devuelve la propiedad/objeto screen
+        window.history -> devuelve el historial
+        window.location -> devuevle la localidad
+
+      */
+
+    </script>
+  </body>
+</html>

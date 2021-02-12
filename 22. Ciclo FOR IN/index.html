@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ciclo FOR IN</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //Definimos un objeto
+      var propiedad, animal = {
+        nombre: "Cortana",
+        tipo: "Perro",
+        raza: "No se sabe xD",
+        edad: 4
+      };
+
+      for (propiedad in animal) {
+        alert(propiedad+ ": "+animal[propiedad]);
+      }
+    </script>
+  </body>
+</html>

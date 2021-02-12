@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Objetos nativos - String II</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //Instanciacion
+      var daw = "Desarollo de aplicaciones web",
+          dam = 'Desarrollo de aplicaciones multiplataforma',
+          asir = "Administracion de 'Sistemas informaticos' en Red",
+          smr = "Sistemas \"Microinformaticos\" y redes",
+          ciclos = new String("");
+
+      //Concatenacion de cadenas
+      ciclos = ciclos + "Hay 3 ciclos de Grado Superior: \n";
+      ciclos = ciclos + daw + ", " + dam + ", " + asir + "\n";
+      ciclos = ciclos + " y 1 ciclo de Grado Medio: \n";
+      ciclos = ciclos + smr;
+
+      //alert(ciclos);
+
+      //Propiedades
+      //length: devuelve la longitud de una cadena
+      //alert("La longitud de ciclos es: "+ciclos.length);
+
+      //Metodos:
+      //Busqueda:
+      //charAt (<num>): devuelve el caracter de una posicion
+      alert("El caracter 16 de la cadena ciclos es: "+ciclos.charAt(16));
+      //indexOf(<caracter>): devuelve la primera posicion de un caracter en
+      //                     una cadena
+      alert("La primera aparicion de la letra 'a' en ciclos es: "+ciclos.indexOf("a"));
+      //lastIndexOf(<caracter>): devuelve la ultima posicion de un caracter en
+      //                     una cadena
+      alert("La primera aparicion de la letra 'a' en ciclos es: "+ciclos.lastIndexOf("a"));
+      //search(<cadena\expresion>): buscar una cadena o expresion regular en otra
+      //                            cadena
+      alert("Busca la cadena web en la variable 'daw' "+daw.search("web"));
+      //match(<expresion_regular>): busca una expresion regular en otra cadena
+
+      //Comparacion:
+      //localeCompare(<cadena>): devuelve -1 (antes), 0 (igual), 1 (despues)
+      alert("¿Es 'daw' menos que 'dam'? :"+daw.localeCompare(dam));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ciclo FOR</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+        /*
+        - Sintaxis
+          for (<sentencia_1>; <sentencia_2>; <sentencia_3>) {
+            //<codigo_que_se_repite>
+          }
+
+            - <sentencia_1>: se ejecuta antes de que empiece el
+              bloque de codigo a repetir
+
+            - <sentencia_2>: define la condicion con la que el
+              bloque de codigo se va ejecutar
+
+            - <sentencia_3>: se ejecuta despues que acabe el
+              bloque de codigo a repetir
+        */
+        var i;
+        for (i=1 ; i<=5 ; i++) { //Tambien podria ser i = i + 1
+          alert("i = "+i);
+        }
+
+        //Variaciones
+        //1. Si omitimos la primera sentencia debemos haber inicializado
+        //la variable con anterioridad
+
+        var j=0;
+        for (; j <= 5; j++) {
+          alert("j = "+j);
+        }
+
+        //2. Si omitimos la segunda sentencia dentro el codigo a repetir
+        //debemos incluir una instruccion break
+        var k;
+        for (k=1; ; k++) {
+          alert("k = "+k)
+          if(k==5) //Se puede poner sin corchete porque solo hay una sentencia
+            break;
+        }
+
+        //3. Si omitimos la tercer sentencia debemos incrementar el valor
+        //de la variable dentro del ciclo
+
+        var l;
+        for (l=1; l <=5;) {
+          alert("l = "+l);
+          l = l + 1; //tambien se puede l++
+        }
+
+        //4. Trabajar con dos o mas valores dentro del ciclo
+        var m, n;
+
+        for (m=1, n=10 ; m <= 10 && n >= 1 ; m++, n--) { //m = m+1 ; n = n-1
+          alert("m = "+m+" , "+" n = "+n);
+        }
+
+    </script>
+  </body>
+</html>

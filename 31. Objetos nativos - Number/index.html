@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Objetos nativos - Number</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      /* Caracteristicas
+        - Solo hay un tipo de dato numero
+          - Podemos representar: 34, 34.05, 123e4, 123e-4, 0xFF
+      */
+
+      //Cambio de base entre numeros: toString()
+      var base10 = 128;
+      //alert("Binaria: "+base10.toString(2));
+      //alert("Octal: "+base10.toString(8));
+      //alert("Hexadecimal: "+base10.toString(16));
+
+      //Infinito a -Infinito: Infinity -Infinity
+      /*
+        var inf = 2;
+        while(inf != Infinity){
+          alert(inf);
+          inf = inf * inf; //Tambien inf *= inf
+        }
+
+        var dividendo=-2, divisor = 0;
+        alert("Division -2/0= "+ (dividendo/divisor)); //-infinity
+        alert("Typeof: "+(dividendo/divisor)); //-Infinity
+
+        //NaN: not a number
+        var atipico = 100/"casa";
+            atipico2= 100/"10";
+        alert("100/'casa' = "+atipico);
+        alert("100/'10' = "+atipico2);
+        alert("¿Es un NaN atipico?: "+isNaN(atipico));
+        alert("¿De que tipo es NaN?: "+typeof(atipico));
+        */
+
+        //Numeros como objetos
+        var numero = 123;
+        var numero2 = new Number(123);
+        var numero3 = new Number(123);
+        alert("numero 1 = "+typeof(numero)); //Number
+        alert("numero 2 = "+typeof(numero2)); //Object
+
+        alert("numero 1 == numero 2 "+(numero==numero2)); //true
+        alert("numero 1 === numero 2 "+(numero===numero2));//false
+        alert("numero 2 === numero 3 "+(numero2===numero3)); //false
+    </script>
+  </body>
+</html>
